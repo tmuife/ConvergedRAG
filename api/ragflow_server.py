@@ -85,8 +85,8 @@ if __name__ == '__main__':
     print_rag_settings()
 
     # init db
-    init_web_db()
-    init_web_data()
+    #init_web_db()
+    #init_web_data()
     # init runtime config
     import argparse
 

@@ -419,7 +419,11 @@ class DocumentService(CommonService):
                     else:
                         status = TaskStatus.DONE.value
 
-                msg = "\n".join(sorted(msg))
+                #msg = "\n".join(sorted(msg))
+                # 过滤掉 None 元素
+                result = [m for m in msg if m is not None]
+                # 对过滤后的列表进行排序并拼接
+                msg = "\n".join(sorted(result))
                 info = {
                     "process_duation": datetime.timestamp(
                         datetime.now()) -
